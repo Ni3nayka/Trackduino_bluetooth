@@ -12,10 +12,24 @@
  * modify: september 2022
  */
 
-#include "bluetooth.h"
+#pragma once
 
-#ifndef Trackduino_bluetooth_Serial
-#define Trackduino_bluetooth_Serial Serial
-#endif
+#include <Arduino.h>
 
-Bluetooth bluetooth;
+#define commandSize 9
+
+class Bluetooth {
+
+  public:
+
+    setup();
+    update();
+
+    int x,y,z,w,ax,ay,az;
+    bool f1,f2,f3,f4,f5,f6;
+
+    bool enable;
+
+  private:
+    operating();
+};
