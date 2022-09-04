@@ -1,0 +1,5 @@
+oficial site:
+https://robotrack-rus.ru/wiki/doku.php/ehlektronika/trekduino
+
+oficial android app:
+https://robotrack-rus.ru/wiki/doku.php/po/robotrek_pdu

@@ -1,0 +1,13 @@
+################### lib colors ###################
+
+####### KEYWORD1 – big orange - data types #######
+
+Bluetooth             KEYWORD1
+Trackduino_bluetooth  KEYWORD1
+
+### KEYWORD2 – orange - methods and functions ####
+
+########### LITERAL1 – blue - constant ###########
+
+
+
