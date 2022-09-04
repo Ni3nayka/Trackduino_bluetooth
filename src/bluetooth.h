@@ -22,7 +22,8 @@ class Bluetooth {
 
   public:
 
-    setup();
+    Bluetooth();
+    //setup();
     update();
 
     int x,y,z,w,ax,ay,az;

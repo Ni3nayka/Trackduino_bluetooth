@@ -15,7 +15,7 @@
 #include "bluetooth.h"
 #pragma once
 
-Bluetooth::setup() {
+Bluetooth::Bluetooth() {
   Serial.begin(115200); 
   enable = 1;
 }
