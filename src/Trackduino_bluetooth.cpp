@@ -9,33 +9,33 @@
  * 
  * author: Egor Bakay <egor_bakay@inbox.ru>
  * write:  august 2022
- * modify: september 2022
+ * modify: november 2022
  */
 
-#include "bluetooth.h"
+#include "Trackduino_bluetooth.h"
 #pragma once
 
 Bluetooth::Bluetooth() {
-  Serial.begin(115200); 
+  BT_Serial.begin(115200); 
   enable = 1;
 }
 
-Bluetooth::update() {
+void Bluetooth::update() {
   if (serialEventRun && enable==1) Bluetooth::operating(); 
   //if (serialEventRun && enable==0) serialEventRun();
 }
 
-Bluetooth::operating() {
+void Bluetooth::operating() {
   byte command[9] = {0};
   boolean f[6] = {0};
   int value[7] = {0};
 
-  if (Serial.available() >=commandSize) {
+  if (BT_Serial.available() >=commandSize) {
     
     for (int i = 0; i <= commandSize; i++) {
-      command[i] = (byte)Serial.read(); // Save command
+      command[i] = (byte)BT_Serial.read(); // Save command
     }
-    while (Serial.available()) Serial.read(); // очиска мусора, чтобы не было задержек
+    while (BT_Serial.available()) BT_Serial.read(); // очиска мусора, чтобы не было задержек
       
     int fData = (int)command[7];
     // Найдем все включенные клавиши
